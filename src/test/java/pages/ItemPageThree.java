@@ -4,13 +4,19 @@ import org.openqa.selenium.By;
 
 public class ItemPageThree extends BasePage{
 
-    By buttonAddCar = By.id("add-to-cart-button");
+    By buttonAddCart = By.id("add-to-cart-button");
+    By textButtonAddCart = By.id("submit.add-to-cart-announce");
+
 
 
     public ItemPageThree(){
         super(driver);
     }
     public void findButtonAdd(){
-        findAdd(buttonAddCar);
+        findAdd(buttonAddCart);
     }
+    public String textAddCart(){
+        return getText(textButtonAddCart);
+    }
+
 }

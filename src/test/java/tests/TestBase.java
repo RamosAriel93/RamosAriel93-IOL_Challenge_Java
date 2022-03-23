@@ -15,8 +15,8 @@ public class TestBase {
     public void before(){
         System.setProperty(Config.BROWSER,Config.PATH);
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.get(Config.BASE_URL);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 

@@ -39,6 +39,14 @@ public class BasePage extends TestBase {
         catch (NoSuchElementException e){
             System.out.println("Sin stock por el momento");
         }
+        finally {
+            System.out.println("finally");
+        }
+    }
+
+    public String getText(By locator){
+        WebElement text = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return text.getText();
     }
 
 }
