@@ -30,4 +30,15 @@ public class BasePage extends TestBase {
         List<WebElement> elementList = driver.findElements(locator);
         elementList.get(2).click();
     }
+
+    public void findAdd(By locator){
+        try {
+            driver.findElement(locator).isDisplayed();
+            System.out.println("Hay stock del producto");
+        }
+        catch (NoSuchElementException e){
+            System.out.println("Sin stock por el momento");
+        }
+    }
+
 }
